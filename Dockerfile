@@ -9,8 +9,4 @@ RUN sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.
 RUN apt-get update
 RUN apt-get -y install jenkins
 
-ADD run /usr/local/bin/run
-
-EXPOSE 8080
-VOLUME ["/var/lib/jenkins"]
-CMD /usr/local/bin/run
+ENTRYPOINT exec su jenkins -c "java -jar /usr/share/jenkins/jenkins.war"
