@@ -1,3 +1,2 @@
 #!/bin/bash
-chown jenkins /home/jenkins/.jenkins
 exec su jenkins -c "java -jar /usr/share/jenkins/jenkins.war"
