@@ -1,4 +1,4 @@
-FROM ubuntu:12.04
+FROM ubuntu
 MAINTAINER Allan Espinosa "allan.espinosa@outlook.com"
 
 RUN echo deb http://archive.ubuntu.com/ubuntu precise universe >> /etc/apt/sources.list
